@@ -83,3 +83,33 @@ let n=5
 //   }
 //   console.log();
 // }
+
+// var obj={
+//     display:function(sirname,id){
+//         return this.name+" "+sirname+ " "+id;
+//     }
+// }
+
+
+// var oj={name:"ketan"}
+// var m=obj.display.bind(oj,"sharma",1);
+// console.log(m())
+
+
+// let j=["d","K","s","S","sss"]
+// let[,a]=j
+// console.log(a);
+
+
+// new Promise(function(resolve,reject){
+//     setTimeout(square=(x)=>resolve(x*x),5000)
+// }).then(function(data){console.log(data)})
+// // square(5)
+
+// let a="10"
+// let b="20"
+// let c="30"
+// console.log(+a + +b + c);
+
+console.log(null ?? "one");
+console.log(undefined ?? "two");
