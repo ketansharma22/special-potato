@@ -49,10 +49,25 @@ using namespace std;
 // }
 
 
-//add strings
+// palindrome check with recursion
+
+bool checkPalindrome(string str,int s,int e){
+    if(s>e){
+        return true;
+    }
+    if(str[s]==str[e]){
+       checkPalindrome(str,s+1,e-1);
+        
+    }
+    else{
+        return false;
+    }
+}
+
+
 int main(){
-    int a=10;
-    string b="0";
-    int c=a-b;
-    cout<<c;
+    string str="rar";
+    int s=0;
+    int e=str.size();
+    cout<<checkPalindrome(str,s,e)<<endl;
 }

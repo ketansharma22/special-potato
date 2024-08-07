@@ -111,5 +111,5 @@ let n=5
 // let c="30"
 // console.log(+a + +b + c);
 
-console.log(null ?? "one");
-console.log(undefined ?? "two");
+// console.log(null ?? "one");
+// console.log(undefined ?? "two");
