@@ -1,4 +1,4 @@
-let n=5
+//let n=5
 // ~~~~ Write a Program to print the right triangle star pattern.
 // for(let i=0;i<5;i++){
 //     let star=""
