@@ -3,6 +3,8 @@
 #include <vector>
 #include <limits.h>
 #include <typeinfo>
+#include<algorithm>
+#include<string>
 using namespace std;
 
 
@@ -124,3 +126,121 @@ using namespace std;
 // }
 
 
+// int findmax(int arr[],int n){
+//     if (n == 0) return 0;
+
+//     int max_len = 1;
+//     int current_len = 1;
+
+//     for (int i = 1; i < n; ++i) {
+//         if (arr[i] > arr[i - 1]) {
+//             current_len++;
+//         } else {
+//             if (current_len > max_len) {
+//                 max_len = current_len;
+//             }
+//             current_len = 1;
+//         }
+//     }
+
+//     // Final check after the loop
+//     if (current_len > max_len) {
+//         max_len = current_len;
+//     }
+
+//     return max_len;
+// }
+
+// int main(){
+//     int N;
+//     cin>>N;
+//     int arr [N];
+//     for(int i=0;i<N;i++){
+//         cin>>arr[i];
+
+//     }
+//     int max=findmax(arr,N);
+//     cout<<max;
+//     return 0;
+// }
+
+
+
+
+
+// string generateMinimumNumber(const string& pattern) {
+//     int n = pattern.size();
+//     if (n == 0) return "No String Found";
+//     if (n > 9) return "String length exceeds the given limit";
+
+//     vector<int> result;
+//     int num = 1;
+
+//     for (int i = 0; i <= n; i++) {
+//         result.push_back(num++);
+
+//         // If it's the end of the string or we encounter an 'I'
+//         if (i == n || pattern[i] == 'I') {
+//             int j = i - 1;
+//             while (j >= 0 && pattern[j] == 'D') {
+//                 j--;
+//             }
+//             reverse(result.begin() + j + 1, result.end());
+//         }
+//     }
+
+//     string output;
+//     for (int i : result) {
+//         output += to_string(i);
+//     }
+
+//     return output;
+// }
+
+// int main() {
+//     string pattern;
+//     cin >> pattern;
+
+//     cout << generateMinimumNumber(pattern) << endl;
+
+//     return 0;
+// }
+
+
+string generateMinimumNumber(string str) {
+    int n = str.size();
+    if (n == 0) return "No String Found";
+    if (n > 9) return "String length exceeds the given limit";
+
+    vector<int> result;
+    int num = 1;
+
+    for (int i = 0; i <= n; i++) {
+        result.push_back(num++);
+
+        // If it's the end of the string or we encounter an 'I'
+        if (i == n || str[i] == 'I') {
+            int j = i - 1;
+            while (j >= 0 && str[j] == 'D') {
+                j--;
+            }
+            reverse(result.begin() + j + 1, result.end());
+        }
+    }
+
+    string output;
+    for (int i : result) {
+        output += to_string(i);
+    }
+
+    return output;
+}
+
+int main() {
+    string str;
+    cin >> str;
+
+    cout << generateMinimumNumber(str) << endl;
+
+    return 0;
+}
