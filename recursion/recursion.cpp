@@ -207,40 +207,47 @@ using namespace std;
 // }
 
 
-string generateMinimumNumber(string str) {
-    int n = str.size();
-    if (n == 0) return "No String Found";
-    if (n > 9) return "String length exceeds the given limit";
+// string generateMinimumNumber(string str) {
+//     int n = str.size();
+//     if (n == 0) return "No String Found";
+//     if (n > 9) return "String length exceeds the given limit";
 
-    vector<int> result;
-    int num = 1;
+//     vector<int> result;
+//     int num = 1;
 
-    for (int i = 0; i <= n; i++) {
-        result.push_back(num++);
+//     for (int i = 0; i <= n; i++) {
+//         result.push_back(num++);
 
-        // If it's the end of the string or we encounter an 'I'
-        if (i == n || str[i] == 'I') {
-            int j = i - 1;
-            while (j >= 0 && str[j] == 'D') {
-                j--;
-            }
-            reverse(result.begin() + j + 1, result.end());
-        }
-    }
+//         // If it's the end of the string or we encounter an 'I'
+//         if (i == n || str[i] == 'I') {
+//             int j = i - 1;
+//             while (j >= 0 && str[j] == 'D') {
+//                 j--;
+//             }
+//             reverse(result.begin() + j + 1, result.end());
+//         }
+//     }
 
-    string output;
-    for (int i : result) {
-        output += to_string(i);
-    }
+//     string output;
+//     for (int i : result) {
+//         output += to_string(i);
+//     }
 
-    return output;
-}
+//     return output;
+// }
 
-int main() {
-    string str;
-    cin >> str;
+// int main() {
+//     string str;
+//     cin >> str;
 
-    cout << generateMinimumNumber(str) << endl;
+//     cout << generateMinimumNumber(str) << endl;
 
-    return 0;
+//     return 0;
+// }
+
+
+int main(){
+    cout<<"hello world \n";
+    cout<<"ketan\n";
+
 }
