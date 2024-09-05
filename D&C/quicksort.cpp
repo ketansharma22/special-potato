@@ -4,7 +4,7 @@ using namespace std;
 
 int partition(int arr[],int s, int e)
 {
-    //choose pivot element
+    //choose pivot
     int pivotIndex=s;
     int pivot=arr[s];
 
