@@ -15,23 +15,16 @@ void merge(int array[], int const left,
 	auto *leftArray = new int[subArrayOne],
 		*rightArray = new int[subArrayTwo];
 
-	// Copy data to temp arrays leftArray[] 
-	// and rightArray[]
 	for (auto i = 0; i < subArrayOne; i++)
 		leftArray[i] = array[left + i];
 	for (auto j = 0; j < subArrayTwo; j++)
-		rightArray[j] = array[mid + 1 + j];
+		rightArray[j] = array[mid + 1 + j];	
 
-	// Initial index of first sub-array
-	// Initial index of second sub-array
-	auto indexOfSubArrayOne = 0, 
+		auto indexOfSubArrayOne = 0, 
 		indexOfSubArrayTwo = 0; 
 
-	// Initial index of merged array
 	int indexOfMergedArray = left; 
 
-	// Merge the temp arrays back into 
-	// array[left..right]
 	while (indexOfSubArrayOne < subArrayOne && 
 		indexOfSubArrayTwo < subArrayTwo) 
 	{
@@ -51,8 +44,6 @@ void merge(int array[], int const left,
 		indexOfMergedArray++;
 	}
 	
-	// Copy the remaining elements of
-	// left[], if there are any
 	while (indexOfSubArrayOne < subArrayOne) 
 	{
 		array[indexOfMergedArray] = 
@@ -61,8 +52,6 @@ void merge(int array[], int const left,
 		indexOfMergedArray++;
 	}
 
-	// Copy the remaining elements of
-	// right[], if there are any
 	while (indexOfSubArrayTwo < subArrayTwo) 
 	{
 		array[indexOfMergedArray] = 
@@ -72,14 +61,10 @@ void merge(int array[], int const left,
 	}
 }
 
-// begin is for left index and end is
-// right index of the sub-array
-// of arr to be sorted */
 void mergeSort(int array[], 
 			int const begin, 
 			int const end)
 {
-	// Returns recursively
 	if (begin >= end)
 		return; 
 
@@ -89,16 +74,12 @@ void mergeSort(int array[],
 	merge(array, begin, mid, end);
 }
 
-// UTILITY FUNCTIONS
-// Function to print an array
 void printArray(int A[], int size)
 {
 	for (auto i = 0; i < size; i++)
 		cout << A[i] << " ";
 	cout<<endl;
 }
-
-// Driver code
 int main()
 {
 	int arr[] = { 12, 11, 13, 5, 6, 7 };
